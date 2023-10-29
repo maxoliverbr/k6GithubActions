@@ -5,8 +5,8 @@ export default function () {
     const url = 'https://postman-echo.com/post';
 
     const payload = JSON.stringify({
-        username: 'kminchelle',
-        password: '0lelplR'
+        username: 'someuser',
+        password: 'somepassword'
     });
 
     const params = {
@@ -20,7 +20,7 @@ export default function () {
     const checkOutput = check(
         res,
         {
-            'response code was 200': (r) => r.status == 200,
+            'response code was 200': (r) => r.status === 200,
             'body size was less than 1234 bytes': (r) => r.body.length < 1234,
             'body has username': (r) => r.body.includes('username'),
             'headers has content json': (r) => r.headers['Content-Type'].includes('json'),
