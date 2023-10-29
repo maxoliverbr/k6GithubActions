@@ -23,7 +23,9 @@ export default function () {
             'response code was 200': (r) => r.status === 200,
             'body size was less than 1234 bytes': (r) => r.body.length < 1234,
             'body has username': (r) => r.body.includes('username'),
+            'body has password': (r) => r.body.includes('password'),
             'headers has content json': (r) => r.headers['Content-Type'].includes('json'),
+            'headers has content application/json': (r) => r.headers['Content-Type'] === ('application/json'),
         },
         { myTag: "I'm a tag" }
     );
