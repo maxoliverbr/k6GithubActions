@@ -25,7 +25,7 @@ export default function () {
             'body has username': (r) => r.body.includes('username'),
             'body has password': (r) => r.body.includes('password'),
             'headers has content json': (r) => r.headers['Content-Type'].includes('json'),
-            'headers has content application/json': (r) => r.headers['Content-Type'] === ('application/json'),
+            'headers has content application/json': (r) => r.headers['Content-Type'] === 'application/json',
         },
         { myTag: "I'm a tag" }
     );
